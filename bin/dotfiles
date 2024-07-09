@@ -2,6 +2,7 @@
 
 set -e
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
 command="${1}"
 package="${2}"
 
@@ -18,12 +19,12 @@ fi
 case "${command}" in
   "install")
     echo "🚀 Installing package: ${package}"
-    ${package}/install.sh
+    $DIR/${package}/install.sh
     echo "\n"
     ;;
   "uninstall")
     echo "🗑  Uninstalling package: ${package}"
-    ${package}/uninstall.sh
+    $DIR/${package}/uninstall.sh
     echo "\n"
     ;;
   *)
