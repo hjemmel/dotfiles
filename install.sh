@@ -5,5 +5,5 @@ set -e
 ###
 # Install dependencies
 ###
-./bin/dotfiles install zed
-./bin/dotfiles install github
+bin/dotfiles install zed
+bin/dotfiles install github
