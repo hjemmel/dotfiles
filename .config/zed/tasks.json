@@ -1,0 +1,46 @@
+// Static tasks configuration.
+//
+// Example:
+[
+  {
+    "label": "Run All Tests",
+    "command": "echo \"mix test \n \" && mix test",
+    "args": ["--color"],
+    "env": {
+      "MIX_ENV": "test"
+    }
+  },
+  {
+    "label": "Test Current Line",
+    "command": "echo \"mix test $ZED_FILE:$ZED_ROW \n \" && mix test $ZED_FILE:$ZED_ROW",
+    "args": ["--color"]
+  },
+  {
+    "label": "Test Current File",
+    "command": "echo -n \"mix test $ZED_FILE \n \" && mix test $ZED_FILE",
+    "args": ["--color"],
+    "env": {
+      "MIX_ENV": "test"
+    }
+  },
+  {
+    "label": "Format Current File",
+    "command": "mix format $ZED_FILE && echo -n $ZED_FILE Formatted!"
+  },
+  {
+    "label": "Store Current Test Line",
+    "command": "echo -n ${ZED_FILE}:${ZED_ROW} > ${ZED_WORKTREE_ROOT}/.zed/STORED_TEST && echo -n Test Line $ZED_FILE Stored!"
+  },
+  {
+    "label": "Store Current Test File",
+    "command": "echo -n ${ZED_FILE} > ${ZED_WORKTREE_ROOT}/.zed/STORED_TEST && echo -n Test File $ZED_FILE Stored!"
+  },
+  {
+    "label": "Delete Stored Test",
+    "command": "rm ${ZED_WORKTREE_ROOT}/.zed/STORED_TEST && echo -n Stored Test Deleted!"
+  },
+  {
+    "label": "Run Stored Test",
+    "command": "echo -n \"mix test $(cat ${ZED_WORKTREE_ROOT}/.zed/STORED_TEST) \n \" && mix test $(cat ${ZED_WORKTREE_ROOT}/.zed/STORED_TEST)"
+  }
+]
