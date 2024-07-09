@@ -2,8 +2,10 @@
 
 set -e
 
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
 ###
 # Install dependencies
 ###
-bin/dotfiles install zed
-bin/dotfiles install github
+$DIR/bin/dotfiles install zed
+$DIR/bin/dotfiles install github
