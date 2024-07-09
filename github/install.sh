@@ -3,8 +3,8 @@
 set -e
 
 # Installation
-gh extension install dlvhdr/gh-dash || true
-gh extension install github/gh-copilot || true
+gh extension install dlvhdr/gh-dash
+gh extension install github/gh-copilot
 
 # Upgrades
 gh extension upgrade --all
