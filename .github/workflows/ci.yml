@@ -1,0 +1,15 @@
+name: Smoke Test CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-11, macos-12, macos-latest]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute full install
+        run: ./install.sh
