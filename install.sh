@@ -7,3 +7,4 @@ set -e
 ###
 ./bin/dotfiles install zed
 ./bin/dotfiles install github
+./bin/dotfiles install iex
