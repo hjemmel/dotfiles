@@ -19,12 +19,10 @@ case "${command}" in
   "install")
     echo "🚀 Installing package: ${package}"
     ${package}/install.sh
-    echo "\n"
     ;;
   "uninstall")
     echo "🗑  Uninstalling package: ${package}"
     ${package}/uninstall.sh
-    echo "\n"
     ;;
   *)
     echo "${command} is not a valid command"
