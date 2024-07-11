@@ -2,6 +2,9 @@ name: Smoke Test CI
 
 on: [push]
 
+env:
+  GH_TOKEN: ${{ github.token }}
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
