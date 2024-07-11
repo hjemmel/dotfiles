@@ -7,7 +7,7 @@ gh extension install dlvhdr/gh-dash || true
 gh extension install github/gh-copilot || true
 
 # Upgrades
-gh extension upgrade --all
+gh extension upgrade --all || true
 
 # Config
 mkdir -p "${HOME}/.config/gh-dash/"
